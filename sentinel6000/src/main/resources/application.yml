@@ -1,0 +1,15 @@
+server:
+  port: 6500
+spring:
+  application:
+    name: sentinel
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        #sentinel控制面板地址8080,监控6000
+        dashboard: localhost:8080
+        #默认端口为8719,若被占用,则8720...一直往后推
+        port: 8719
